@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" type = "image/png" href = "logo2.png">
+	<title>E-nterview</title>
+</head>
+<body onload="slider()">  <!--For having the slider there by default-->
+    <section id="Home">
+        <header>
+			<img src="logo1.png">
+        <ul>
+            <li><a href="#Home"><p style="font-size:1.5vw">Home</p></a></li>
+            <li><a href="#Products"><p style="font-size:1.5vw">Training</p></a></li>
+            <li><a href="#Services"><p style="font-size:1.5vw">Interview</p></a></li>
+            <li><a href="#Team"><p style="font-size:1.5vw">Team</p></a></li>
+            <li><a href="#Contact"><p style="font-size:1.5vw">Contact</p></a></li>
+            <li><a href="#About"><p style="font-size:1.5vw">About Us</p></a></li>
+        </ul>
+        </header>
+        <div class="banner">
+            <div class="slider">
+                <img src="1.jpg" id="SlideImg">
+            </div>
+            <div class="overlay">
+                <div class="content">
+                    <h1 style="font-size:5vw">One page promising to
+                        fill all your needs!
+                    </h1>
+                    <h3 style="font-size:1.5vw">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</h3>
+                        <a href="#Products"><button type="button"><p style="font-size:1vw">GET STARTED</p></button></a>
+                        <a href="#About"><button type="button"><p style="font-size:1vw">KNOW MORE</p></button></a>
+                    </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <section id="Products">
+        <div class="catalog">
+            <h1 id="headings">PRODUCTS</h1>
+            <div class="productimg">
+                <div class="p1">
+                    <img src="p1.jpg">
+                </div>
+                <div class="p2">
+                    <img src="p2.jpg">
+                </div>
+                <div class="p3">
+                    <img src="p3.jpg">
+                </div>
+                <div class="p4">
+                    <img src="p4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Services">
+        <div class="Services">
+            <h1 id="headings">SERVICES</h1>
+			<iframe src='https://webchat.botframework.com/embed/E-nterview-chatbot?s=0sa1cKiNtiI.m2L9xP_ul2-NQseiORm2R2tJvxZBlhbZGD55cV0J0oc'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+        </div>
+    </section>
+    <section id="Team">
+        <div class="team">
+            <h1 id="headings">MEMBERS</h1>
+        </div>
+    </section>
+    <section id="Contact">
+        <div class="Contact">
+            <h1 id="headings">CONTACT US</h1>
+        </div>
+    </section>
+    <section id="About">
+        <div class="About">
+            <h1 id="headings">ABOUT US</h1>
+        </div>
+    </section>
+    <script type="text/javascript">
+    var SlideImg = document.getElementById("SlideImg");
+    var imgs = new Array(
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+    );
+    var len = imgs.length;
+    var i = 0;
+    function slider(){
+        if(i > len-1){
+            i = 0;
+        }
+        SlideImg.src = imgs[i];
+        i++;
+        setTimeout('slider()', 3000);
+    }
+        
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    </script>
+</body>
+</html>
